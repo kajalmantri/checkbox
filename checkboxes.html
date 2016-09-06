@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+ <form fieldset>
+        <form1 action="name" method="get" >
+            <input class="box" type="checkbox" checked> I agree <br>
+            <input class="box" type="checkbox" checked> I agree <br>
+            <input class="box" type="checkbox" checked> I agree <br>
+            <input class="box" type="checkbox" checked> I agree <br>
+            <input class="box" type="checkbox" checked> I agree <br>
+            <input class="box" type="checkbox" checked> I agree <br>
+            <input class="box" type="checkbox" checked> I agree <br>
+            <input class="box" type="checkbox" checked> I agree <br>
+            <input class="box" type="checkbox" checked> I agree <br>
+            <input class="box" type="checkbox" checked> I agree
+        </form1><br>
+        <input type="button" id="submit" value="Submit">
+        <input type="button" id="validation" value="Validation">
+    </form>
+
+
+
+
+
+	<script>
+	var _id = function _id(id) {
+    return document.getElementById(id);
+};
+
+checkbox = document.getElementsByClassName('box');
+// var box =_id('box');
+var submit = _id('submit');
+var validation = _id('validation');
+
+submit.addEventListener('click', function showText() {
+        for(var i=0; i<checkbox.length; i++){
+            if(checkbox[i].checked == true){
+                checkbox[i].checked = false;
+            }else{
+                checkbox[i].checked = true;
+            }
+            
+        }
+        // box.checked = false;
+
+});
+// to check any number of button is clicked 
+// validation.addEventListener('click', function showText() {
+//         for(var i=0; i<box.length; i++){
+//         	if(box[i].checked === true){
+//         		alert('Box is checked');
+//         	}     
+//         }
+//         // box.checked = false;
+
+// });	
+
+
+	</script>
+</body>
+</html>
